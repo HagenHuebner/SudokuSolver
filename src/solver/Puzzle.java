@@ -68,10 +68,9 @@ public class Puzzle {
 	
 	public static final int GRID_LEN = 9; 
 
-	//private IntGrid grid;
 	private int[][] grid;
 	public Puzzle(int[][] grid){
-		this.grid = grid; //new IntGrid(grid);
+		this.grid = grid;
 	}
 	
 	public HashSet<Integer> calcOptions(Cell c)
@@ -90,7 +89,6 @@ public class Puzzle {
 			}
 		}
 		
-		//IntGrid modifiedGrid = grid.clone();
 		gridClone[cellToSet.row][cellToSet.col] = value;
 		return new Puzzle(gridClone);
 	}
